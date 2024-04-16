@@ -108,7 +108,6 @@ public class TitaniumFirebaseConfigModule extends KrollModule {
 
     @Kroll.method
     public void activateFetched(KrollFunction callback) {
-        KrollDict result = new KrollDict();
         FirebaseRemoteConfig.getInstance().activate().addOnCompleteListener(task -> {
             if (callback != null) {
                 KrollDict result = new KrollDict();
